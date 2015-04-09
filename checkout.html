@@ -1,0 +1,216 @@
+	<hr />
+	<div class="form-wrapper">
+		<div class="form-inner-wrapper">
+									<form action="https://tfp-bt-payments.herokuapp.com/process_payment" method="POST" id="payment-form">
+				<div class="field-list clear">
+						<br />
+					<h2>Select the value of your seedling gift card:</h2>
+                  <p><i>4 or 6-packs of seedlings are priced at $5 a pack. Singles are $3 each or two for $5. </i></p>
+					<span id="gift-amount"><input type="radio" name="giftAmount" value="100.00" checked> $100</span><br>
+					<input type="radio" name="giftAmount" value="50.00"> $50<br>
+					<input type="radio" name="giftAmount" value="25.00"> $25<br>
+					<input type="radio" name="giftAmount" value="15.00"> $15 <br>
+   
+					<input type="radio" name="giftAmount" value="other"> Any amount that's right for your gift: $<input id="other-gift-amt" type="text" name="otherGiftAmount" value=""/><br>
+                  <br />
+                  <hr />
+
+                  <h2>Recepient</h2>
+															<p><input id="dedication-check" type="checkbox" name="dedication-check"> Check here if you would like us to mail your gift card directly to the receipient.</p>
+
+<div class="dedication-fields" style="display:none;">
+  
+                  
+<br />
+
+  <input id="dedication-email-check" class='dedication-email-only' type="checkbox" name="dedication-email-checked"> Click here if you would like us to email the gift card instead.<br /><br />
+
+  <fieldset class="form-item fields name">
+						<div class="title">Name </div>
+						<legend>Name</legend>
+
+						<div class="field first-name">
+							<label class="caption"><input class="field-element field-control" name="dedication-fname" type="text" spellcheck="false" maxlength="30" data-title="First" style="cursor: pointer; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+								First Name</label>
+							</div>
+							<div class="field last-name">
+								<label class="caption"><input class="field-element field-control" name="dedication-lname" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30" data-title="Last">
+									Last Name</label>
+								</div>
+							</fieldset>
+
+				 <div class="form-item field email">
+								<label class="title" for="email-field">Email Address</label>
+
+								<input class="field-element" name="dedication-email" type="text" size="20" spellcheck="false" id="dedication-email-field">
+							</div>				
+<div class="dedication-address-fields">
+  
+
+							<fieldset class="form-item fields address">
+								<div class="title">Address </div>
+								<legend>Address</legend>
+
+								<div class="field address1">
+									<label class="caption"><input class="field-element field-control" name="dedication-address" x-autocompletetype="address-line1" type="text" spellcheck="false" data-title="Line1">
+										Address 1</label>
+									</div>
+									<div class="field address2">
+										<label class="caption"><input class="field-element field-control" name="dedication-address2" type="text" spellcheck="false" data-title="Line2">
+											Address 2</label>
+										</div>
+										<div class="field city">
+											<label class="caption"><input class="field-element field-control" name="dedication-city" type="text" spellcheck="false" data-title="City">
+												City</label>
+											</div>
+											<div class="field state-province">
+												<label class="caption"><input class="field-element field-control" name="dedication-state" type="text" spellcheck="false" data-title="State">
+													State/Province</label>
+												</div>
+												<div class="field zip">
+													<label class="caption"><input class="field-element field-control" name="dedication-zipcode" type="text" spellcheck="false" data-title="Zip">
+														Zip/Postal Code</label>
+													</div>
+												 
+												</fieldset>
+  </div>
+  <br />
+  <input id="dedication-message-check" type="checkbox" name="dedication-message-checked"> Click here if you would like us to send a note with your gift card.<br /><br />
+  
+<div id="dedication-message" style="display:none;" class="form-item field textarea dedication-message-fields">
+                  <label class="title" for="dedication-message-field">Personal Message</label>
+                  <label class="caption">
+                    Maximum length: 250 characters.
+                    </label>
+                  <textarea class="field-element" id="dedication-message-field" name="dedication-message" maxlength="50"></textarea>
+                </div>
+</div>		
+                  
+                  <br />
+<hr />
+                  <h2>
+                    Your Contact Information
+                  </h2>
+                  <br />
+					<fieldset class="form-item fields name required">
+						<div class="title">Name <span class="required">*</span></div>
+						<legend>Name</legend>
+
+						<div class="field first-name">
+							<label class="caption"><input class="field-element field-control" name="fname" x-autocompletetype="given-name" type="text" spellcheck="false" maxlength="30" data-title="First" style="cursor: pointer; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;" required>
+								First Name</label>
+							</div>
+							<div class="field last-name">
+								<label class="caption"><input class="field-element field-control" name="lname" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30" data-title="Last" required>
+									Last Name</label>
+								</div>
+							</fieldset>
+
+<div class="form-item field email required">
+								<label class="title" for="email-field">Email Address <span class="required">*</span></label>
+
+								<input class="field-element" name="email" x-autocompletetype="email" type="text" size="20" spellcheck="false" id="email-field" required>
+							</div>							
+
+							<fieldset class="form-item fields address required">
+								<div class="title">Address <span class="required">*</span></div>
+								<legend>Address</legend>
+
+								<div class="field address1">
+									<label class="caption"><input class="field-element field-control" name="address" x-autocompletetype="address-line1" type="text" spellcheck="false" data-title="Line1" required>
+										Address 1</label>
+									</div>
+									<div class="field address2">
+										<label class="caption"><input class="field-element field-control" name="address2" x-autocompletetype="address-line2" type="text" spellcheck="false" data-title="Line2">
+											Address 2</label>
+										</div>
+										<div class="field city">
+											<label class="caption"><input class="field-element field-control" name="city" x-autocompletetype="city" type="text" spellcheck="false" data-title="City" required>
+												City</label>
+											</div>
+											<div class="field state-province">
+												<label class="caption"><input class="field-element field-control" name="state" x-autocompletetype="state" type="text" spellcheck="false" data-title="State" required>
+													State/Province</label>
+												</div>
+												<div class="field zip">
+													<label class="caption"><input class="field-element field-control" name="zipcode" x-autocompletetype="postal-code" type="text" spellcheck="false" data-title="Zip" required>
+														Zip/Postal Code</label>
+													</div>
+													
+												</fieldset>
+
+
+												<fieldset class="form-item fields">
+													<div class="title">Phone<span class="required">*</span></div>
+													<legend>Phone</legend>
+
+
+													<div class="field text three-digits">
+														<label class="caption"><input class="field-element" x-autocompletetype="phone-area-code" type="text" maxlength="3" data-title="Areacode" id="areaCode" name="areaCode" required="">
+															(###)</label>
+														</div>
+														<div class="field text three-digits">
+															<label class="caption"><input class="field-element" x-autocompletetype="phone-local-prefix" type="text" maxlength="3" data-title="Prefix" id="firstNum" name="firstNum" required="">
+																###</label>
+															</div>
+															<div class="field text four-digits">
+																<label class="caption"><input class="field-element" x-autocompletetype="phone-local-suffix" type="text" maxlength="4" data-title="Line" id="secNum" name="secNum" required="">
+																	####</label>
+																</div>
+													</fieldset>
+<hr />
+                  <br />
+																<h3>
+																	Total payment today: <span id="totalPayment"></span>
+																</h3>
+<h2>
+  Payment Information
+                  </h2>
+                  <div>
+                    Your transaction is securely processed by BrainTree, a PayPal Company. You can review the security information at this <a href="https://www.braintreepayments.com/developers/security" style="color:blue;" target="_blank">link</a>.</div>
+                    </div>
+															<div id="card-error">
+
+															</div>
+															<div class="form-row">
+		<img src="https://s3.amazonaws.com/tfp-site-assets/visa.png" height="30px" />
+                                                              <img src="https://s3.amazonaws.com/tfp-site-assets/mastercard.png" height="30px" />
+                                                              <img src="https://s3.amazonaws.com/tfp-site-assets/discover.png" height="30px" />
+                                                              <img src="https://s3.amazonaws.com/tfp-site-assets/amex.png" height="30px" />
+                                                              <br />
+                                                              <br />
+                                                              <label>
+																	<span>Card Number</span>
+																	<input type="text" size="20" data-stripe="number" id="ccnumber" required/>
+																</label>
+															</div>
+
+															<div class="form-row">
+																<label>
+																	<span>Security Code</span>
+																	<input type="text" size="4" data-stripe="cvc" id="cc-cvc" required/>
+																</label>
+															</div>
+
+															<div class="form-row">
+																<label>
+																	<span>Expiration (MM/YYYY)</span>
+																	<input type="text" size="2" data-stripe="exp-month" id="exp-month" required/>
+																</label>
+																<span> / </span>
+																<input type="text" size="4" data-stripe="exp-year" id="exp-year" required/>
+
+																<input type="hidden" name="rp" />
+															</div>
+															<br />
+															<div class="form-button-wrapper form-button-wrapper--align-left">
+																<input class="button sqs-system-button sqs-editable-button" type="submit" value="Purchase gift card" id="pmt-submit">
+															</div>  
+														</form>
+													</div>
+												</div>
+												
+
+<h4>If you would like to pay via check, please mail it, along with the information on this form, to:</h4><div style="margin-top:15px;margin-left:40px;">
+  <i>The Food Project<br />10 Lewis St.<br /> Lincoln, MA 01773</i>
+  </div>
