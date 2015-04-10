@@ -84,7 +84,7 @@ var BTResponseHandler = function(status, nonce) {
 				console.log($form.serialize());
 				$.ajax({
 
-					url: 'https://checkout-processor.herokuapp.com/process_donation',
+					url: 'https://checkout-processor.herokuapp.com/process_checkout',
 					type: "POST",
 					data: $form.serialize(),
 					crossDomain: true,
