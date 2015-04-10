@@ -77,7 +77,7 @@ var BTResponseHandler = function(status, nonce) {
 					source = getUrlParameter("source"); 
 				}
 				$form.append($('<input type="hidden" name="source" />').val(source));
-				$form.append($('<input type="hidden" name="type" />').val('gift-card'));
+				$form.append($('<input type="hidden" name="transaction_type" />').val('gift-card'));
 
 				$form.append($('<input type="hidden" name="totalDonationAmount" />').val(giftAmount));
 				// and re-submit
