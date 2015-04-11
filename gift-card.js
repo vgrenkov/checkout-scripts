@@ -38,6 +38,14 @@ $(document).ready(function(){
 			}
 		})
 	});
+	$('#dedication-message-field').keyup(function () {
+	    var left = 100 - $(this).val().length;
+	    if (left < 0) {
+	        left = 0;
+	    }
+	    $('#char-countdown').text('Characters left: ' + left);
+	});
+
 
 });
 
