@@ -43,7 +43,7 @@ $(document).ready(function(){
 	    if (left < 0) {
 	        left = 0;
 	    }
-	    $('#char-countdown').text('Characters left: ' + left);
+	    $('#char-countdown').text(left);
 	});
 
 
